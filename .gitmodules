@@ -1,0 +1,6 @@
+[submodule "deps/bogus-interface"]
+	path = deps/bogus-interface
+	url = git@github.com:lijieumn/bogus-interface.git
+[submodule "deps/libarcsim"]
+	path = deps/libarcsim
+	url = git@github.com:lijieumn/libarcsim.git

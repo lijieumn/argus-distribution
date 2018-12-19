@@ -1,0 +1,12 @@
+.idea
+cmake-build-*
+ignore
+output_log.txt
+build
+core
+output
+*.pyc
+data_private_license
+figures/*.aux
+figures/*.log
+figures/*.pdf

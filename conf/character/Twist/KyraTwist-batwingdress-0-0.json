@@ -1,0 +1,38 @@
+// KyraTwist-batdress-0-3
+// 2017-12
+{
+    "frame_time": 0.032,
+    "frame_steps": 16,
+    "end_time": 16,
+    "cloths": [{
+	"mesh": "data_private_license/meshes/character/Twist_BatDressNoGRTx_0.obj", // scaled texture coordinates
+        "transform": {"translate": [0,0, 0], "rotate": [0, 1, 0, 0], "scale":1},
+        "materials": [{
+          "data": "materials/tango-red-jet-set.json", 
+            "thicken": 1,
+    	    "damping": 0.001
+    }],
+        "remeshing": {
+            "refine_angle": 0.7,
+            "refine_compression": 0.005,
+            "refine_velocity": 1,
+            "size": [10e-3, 200e-3],
+            "aspect_min": 0.2
+        }
+    }],
+    "obstacles": [{
+        "input_type": "frames",
+	"frames_prefix": "data_private_license/meshes/character/Kyra_DVStandTwist/Kyra_DVStandTwist",
+        "frame_time": 0.002,
+        "per_duration" : 16,
+        "frame_start": 0,
+        "frame_end": 349,
+	"mesh": "data_private_license/meshes/character/Kyra_DVStandTwist/Kyra_DVStandTwist_0000.obj",
+        "transform": {"translate": [0,0,0], "rotate": [0, 1, 0, 0], "scale":1}
+    }],
+    "gravity": [0, 0, -9.8],
+    "disable": ["popfilter", "proximity"],
+
+    "magic": {"projection_thickness": 2e-3, "repulsion_thickness": 1e-3, "collision_stiffness": 1e6, "fixed_high_res_mesh": false, "friction_coeff": 0.0,
+    "edge_flip_threshold": 0, "conserve_momentum": false, "node_lifetime": 0, "face_edge_constraints": false, "relax_initial_state": false}
+}

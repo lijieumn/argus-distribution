@@ -1,0 +1,42 @@
+\documentclass[tikz]{standalone}
+
+\usepackage{libertine}
+\usepackage{pgfplots}
+\usepgfplotslibrary{statistics}
+
+\newcommand{\basename}{../output/figures/fig_11/box_and_cone}
+
+\begin{document}
+
+\begin{tikzpicture}
+  \begin{axis}[
+    xlabel = {\large number of contacts},
+    ylabel = {\large pruning threshold},
+    ytick={1, 2, 3, 4},
+    yticklabels={0.5, 0.34, 0.17, 0},
+    ]
+    \addplot+ [boxplot] table [y index=2] {\basename_0_34/log.txt};
+    \addplot+ [boxplot] table [y index=2] {\basename_0_34/log.txt};
+    \addplot+ [boxplot] table [y index=2] {\basename_0_17/log.txt};
+    \addplot+ [boxplot] table [y index=2] {\basename_0_00/log.txt};
+    % \addlegendentry{\huge analytical}
+  \end{axis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+  \begin{semilogxaxis}[
+    xlabel = {\large solver iterations},
+    % ylabel = {\large pruning thresholds},
+    ytick={1, 2, 3, 4},
+    yticklabels={},
+    filter discard warning=false,
+    ]
+    \addplot+ [boxplot] table [y index=15] {\basename_0_34/log.txt};
+    \addplot+ [boxplot] table [y index=15] {\basename_0_34/log.txt};
+    \addplot+ [boxplot] table [y index=15] {\basename_0_17/log.txt};
+    \addplot+ [boxplot] table [y index=15] {\basename_0_00/log.txt};
+    % \addlegendentry{\huge analytical}
+  \end{semilogxaxis}
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,70 @@
+{
+    "frame_time": 0.032,
+    "frame_steps": 16,
+    "duration": 16,
+	"end_time":16,
+    "cloths": [{
+        "mesh": "meshes/annulus_75.obj",
+        "transform": {"translate": [-0.62, 0.3, 0.22], "scale":0.55},
+        "materials": [{
+        "data": "materials/camel-ponte-roma.json",
+            "thicken": 1
+    }],
+        "remeshing": {
+            "refine_angle": 0.3,
+            "refine_compression": 0.1,
+            "refine_velocity": 1,
+            "size": [20e-3, 200e-3],
+            "aspect_min": 0.2
+        }
+    }],
+    "motions": [
+        [{"time": 0.2, "transform": {"translate": [0, 0, 0]}},
+        {"time": 0.4, "transform": {"translate": [0, 0, 1]}}],
+        {
+            "center" : [-0.55, 0.6, 0],
+            "points":[
+			{"time": 0.5, "transform": {"rotate": [0, 0,1,0]}},
+			{"time": 0.7, "transform": {"rotate": [180, 0,1,0]}},
+			{"time": 0.9, "transform": {"rotate": [360, 0,1,0]}},
+			{"time": 1, "transform": {"rotate": [360, 0,1,0]}},
+			{"time": 1.2, "transform": {"rotate": [180, 0,1,0]}},
+			{"time": 1.4, "transform": {"rotate": [0, 0,1,0]}}
+		]
+        },
+        {
+            "center" : [1.5, 0.6, 0],
+            "points":[
+			{"time": 0.5, "transform": {"rotate": [0, 0,1,0]}},
+			{"time": 0.7, "transform": {"rotate": [180, 0,1,0]}},
+			{"time": 0.9, "transform": {"rotate": [360, 0,1,0]}},
+			{"time": 1, "transform": {"rotate": [360, 0,1,0]}},
+			{"time": 1.2, "transform": {"rotate": [180, 0,1,0]}},
+			{"time": 1.4, "transform": {"rotate": [0, 0,1,0]}}
+		]
+        }
+    ],
+    "obstacles": [{
+        "mesh": "meshes/pole.obj",
+        "motion" : 1,
+        "transform": {"rotate": [90, 0, 0, 1], "translate": [-0.55,0,0], "scale":0.2}
+    },
+    {
+        "mesh": "meshes/pole.obj",
+        "motion" : 0,
+        "transform": {"rotate": [90, 0, 0, 1], "translate": [0.5,0,0], "scale":0.2}
+    },
+    {
+        "mesh": "meshes/pole.obj",
+        "motion" : 2,
+        "transform": {"rotate": [90, 0, 0, 1], "translate": [1.5,0,0], "scale":0.2}
+    }],
+    "obs_friction": 0.6,
+    "gravity": [0, 0, -9.8],
+    "disable": ["popfilter", "proximity"],
+
+    "magic": {"projection_thickness": 8e-3, "repulsion_thickness": 1e-3, "collision_stiffness": 1e6, "fixed_high_res_mesh": false,
+    "edge_flip_threshold": 0, "conserve_momentum": false, "node_lifetime": 0, "face_edge_constraints": false, "relax_initial_state":false,
+	"friction_coeff": 0.4, "sim_type": "argus"
+}
+}

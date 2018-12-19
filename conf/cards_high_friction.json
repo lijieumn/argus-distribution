@@ -1,0 +1,43 @@
+{
+    "frame_time": 0.032,
+    "frame_steps": 16,
+    "duration": 10,
+    "end_time":10,
+    "cloths": [{
+        "mesh": "meshes/15cards_new.obj",
+        "materials": [{
+        "data": "materials/paper.json",
+            "thicken": 1,
+	    "stretching_mult": 1e-2,
+            "bending_mult" : 1e2
+	//"damping":0.4
+    }],
+        "remeshing": {
+            "refine_angle": 0.5,
+            "refine_compression": 0.01,
+            "refine_velocity": 1,
+            "size": [10e-3, 400e-3],
+            "aspect_min": 0.2
+        }
+    }],
+     "obstacles": [
+    {
+        "mesh": "meshes/square2.obj",
+        "proxy": "floor",
+        "transform": {"translate": [-10.48,-20,-0.001], "rotate": [45,0,0,1], "scale":30}
+        }],
+    "motions": [
+        [{"time": 0, "transform": {"translate": [0, 0,0]}}
+	]],
+    "obs_friction": 0.1,
+    "gravity": [0, 0, -9.8],
+    "disable": ["proximity"],
+    "magic": {"projection_thickness": 1e-3, "friction_coeff": 0.6, "repulsion_thickness": 2e-3, "collision_stiffness": 1e6, "fixed_high_res_mesh": false, "merge_proximal_impacts": false,
+			  "proximity_collisions": true, "self_contact": true, "face_edge_constraints": false, "VE" : true, "EV" : true, "VV" : true,
+			"detection_thickness": 2e-3, "sim_type": "argus", "argus_tolerance":1e-12 }
+}
+
+
+
+
+
