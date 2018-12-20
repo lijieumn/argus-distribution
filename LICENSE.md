@@ -1,8 +1,8 @@
 The Argus-distribution code base works as a framework and the two core projects So-bogus and ARCSim are called as libraries.
 
-So-bogus is freely distributed under open source licenses, described in its [license](deps/bogus-interface/extern/so-bogus/LICENSE.md) file.
+So-bogus is freely distributed under open source licenses, described in its [license](https://bitbucket.org/gdaviet/so-bogus/src/master/LICENSE.md?fileviewer=file-view-default) file.
 
-ARCSim is free for educational, research, and not-for-profit use, subject to certain conditions on attribution as described in the [ARCSim license](deps/libarcsim/LICENSE).
+ARCSim is free for educational, research, and not-for-profit use, subject to certain conditions on attribution as described in the [ARCSim license](https://raw.githubusercontent.com/lijieumn/libarcsim/master/LICENSE).
 
 Please see the respective license files in the subproject directories for details. The framework code in Argus-distribution itself is provided for reference as an example application, but is not covered by a license.
 

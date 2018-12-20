@@ -5,7 +5,7 @@
 1. Clone project` Argus-distribution`.
 
 ```bash
-git clone git@gitlab.inria.fr:mily/Argus-distribution.git
+git clone git@github.com:lijieumn/argus-distribution.git
 cd Argus-distribution
 ```
 
