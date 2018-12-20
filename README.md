@@ -37,7 +37,7 @@ To install the Argus code, please see the [compilation instructions](INSTALL.md)
 
 ## Run
 
-To run the simulation, the easiest way is to execute the Python scripts under the `examples` folder. There are ten files provided:
+To run the simulation, the easiest way is to execute the Python scripts under the `examples` folder. The examples include the validation examples and characther animations with full garments:
 
 ### Validation examples (5 files):
 
@@ -60,10 +60,9 @@ You can also run the script `examples/argus_interface.py` directly. This allows 
 python examples/argus_interface.py -h
 ```
 
-Note that the generated sequence of OBJ files (or PNG files) contains as many files as timesteps simulated. If you would like to generate a sequence which contains just one frame every 33ms (~30 FPS), you need to select one object every 33/dt objects of your sequence, where dt is you chosen simulation timestep (specified in the json configuration files -- see point 4 below). By default, all the simulations in the paper were run with a timestep dt = 2ms, which means that you need to select around 1 object every 16 objects to obtain your sequence at 30 FPS.
+Note that the generated sequence of OBJ files (or PNG files) contains as many files as frames simulated. By default, each frame lasts 32ms so the generated results are 31.25 FPS. The actual running timestep dt is the frame time divided by the number of timesteps per frame. If you want to generate a result with a different FPS or use another timestep, just tune the `frame_time` and `frame_step` in the json configuration files ([mentioned below](#others-not-in-the-paper)).
 
-
-### Character examples (5 files in total, under 5 repositories 'Arabesque', 'Clubbing', 'HipHop', 'Shawl', and 'Twist'):
+### Character examples (5 examples in total, under 5 repositories 'Arabesque', 'Clubbing', 'HipHop', 'Shawl', and 'Twist'):
 
 Each repository contains between 2 and 4 files corresponding to variations of friction coefficients. **IMPORTANT:** To run the character examples, you need to have access to the corresponding character meshes (garment mesh + character motion mesh sequence), which are under private Inria license.
 
@@ -77,7 +76,7 @@ tar xfz argus_data_private_license.tgz
 pushd data_private_license/meshes/character/ && for name in *.tgz; do echo "Extracting $name..."; tar xfz $name; done && popd
 ```
 
-Then you'll be able to run the character examples. For instance, using the command line below will run the Arabesque example with friction coefficient = 0.3
+Then you'll be able to run the character examples. For instance, using the command line below will run the Arabesque example with friction coefficient = 0.3:
 
 ```bash
 python examples/character/Arabesque-0-3.py
@@ -126,8 +125,30 @@ build/apps/argus-cloth replay <output dir> [image dir]
 
 ## Showcases
 
-<img width="500" src="showcases/box_pin.gif"> <img width="500" src="showcases/belt.gif">
+<img width="400" src="showcases/box_pin.gif"> <img width="400" src="showcases/belt.gif">
+<br />
 
-<img width="500" src="showcases/cards_0.2.gif"> <img width="500" src="showcases/cards_0.6.gif">
+<img width="400" src="showcases/cards_0.2.gif"> <img width="400" src="showcases/cards_0.6.gif">
+<br />
 
-<img width="500" src="showcases/drag_cloth.gif"> <img width="500" src="showcases/clubbing.gif">
+<img width="400" src="showcases/drag_cloth.gif">
+<br />
+
+<img width="400" src="showcases/arabesque-0-0.gif"> <img width="400" src="showcases/arabesque-0-3.gif">
+<br/>
+
+<img width="400" src="showcases/clubbing-0-0.gif"> <img width="400" src="showcases/clubbing-0-1.gif">
+<br/>
+<img width="400" src="showcases/clubbing-0-3.gif">
+<br/>
+
+<img width="400" src="showcases/hiphop-0-0.gif"> <img width="400" src="showcases/hiphop-0-3.gif">
+<br/>
+
+<img width="400" src="showcases/shawl-0-3.gif"> <img width="400" src="showcases/shawl-0-6.gif">
+<br/>
+
+<img width="400" src="showcases/twist-0-0.gif"> <img width="400" src="showcases/twist-0-1.gif">
+<br/>
+<img width="400" src="showcases/twist-0-3.gif"> <img width="400" src="showcases/twist-0-6.gif">
+<br/>

@@ -12,19 +12,12 @@ cd Argus-distribution
 2. Update the submodules.
 
 ```bash
-git submodule init
-git submodule update
+git submodule update --init --recursive
 ```
 
-3. Update the `So-bogus` module. The submodule under `deps/bogus-interface` serves as an API project, which exposures interfaces for the `so-bogus` library to the users. The `so-bogus` is the actual frictional contact solver and is organized as a submodule of `bogus-interface`.
-```bash
-cd deps/bogus-interface
-git submodule init
-git submodule update
-```
+> The two libraries  (`bogus-interface` and `libarcsim`) are put as submodules of this project `Argus-distribution`. The submodule `bogus-interface` serves as an API project, which exposures interfaces for the `so-bogus` library to the users. The `so-bogus` is the actual frictional contact solver and is organized as a submodule of `bogus-interface`.
+
 Now you've downloaded all the source code needed for the cloth simulator.
-
-> Note: as the `so-bogus` library is served on [Bit Bucket](https://bitbucket.org), you might need to have a Bit Bucket account and set the SSH key properly to access it.
 
 ## Compile
 
@@ -51,6 +44,6 @@ cmake ../
 make -j
 ```
 
-If you do everything correctly, you shoud be able to complete the compiling successfully. Now the executable file `argus-cloth` is put in `build/apps/`.
+If you do everything correctly, you should be able to complete the compiling successfully. Now the executable file `argus-cloth` is put in `build/apps/`.
 
 
