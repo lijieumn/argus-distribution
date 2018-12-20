@@ -125,6 +125,8 @@ build/apps/argus-cloth replay <output dir> [image dir]
 
 ## Showcases
 
+### Validation Test
+
 <img width="400" src="showcases/box_pin.gif"> <img width="400" src="showcases/belt.gif">
 <br />
 
@@ -132,23 +134,35 @@ build/apps/argus-cloth replay <output dir> [image dir]
 <br />
 
 <img width="400" src="showcases/drag_cloth.gif">
-<br />
 
-<img width="400" src="showcases/arabesque-0-0.gif"> <img width="400" src="showcases/arabesque-0-3.gif">
-<br/>
+### Character Animations with Full Garment
 
-<img width="400" src="showcases/clubbing-0-0.gif"> <img width="400" src="showcases/clubbing-0-1.gif">
-<br/>
-<img width="400" src="showcases/clubbing-0-3.gif">
-<br/>
+#### Arabesque
+mu = 0|mu = 0.3
+------|--------
+<img width="400" src="showcases/arabesque-0-0.gif"> | <img width="400" src="showcases/arabesque-0-3.gif">
 
-<img width="400" src="showcases/hiphop-0-0.gif"> <img width="400" src="showcases/hiphop-0-3.gif">
-<br/>
+#### Clubbing
 
-<img width="400" src="showcases/shawl-0-3.gif"> <img width="400" src="showcases/shawl-0-6.gif">
-<br/>
+mu = 0|mu = 0.1|mu = 0.3
+------|--------|--------
+<img width="400" src="showcases/clubbing-0-0.gif"> | <img width="400" src="showcases/clubbing-0-1.gif"> | <img width="400" src="showcases/clubbing-0-3.gif">
 
-<img width="400" src="showcases/twist-0-0.gif"> <img width="400" src="showcases/twist-0-1.gif">
-<br/>
-<img width="400" src="showcases/twist-0-3.gif"> <img width="400" src="showcases/twist-0-6.gif">
-<br/>
+#### HipHop
+mu = 0 | mu = 0.3
+-------|---------
+<img width="400" src="showcases/hiphop-0-0.gif"> | <img width="400" src="showcases/hiphop-0-3.gif">
+
+#### Shawl
+mu = 0.3 | mu = 0.6
+---------|---------
+<img width="400" src="showcases/shawl-0-3.gif"> | <img width="400" src="showcases/shawl-0-6.gif">
+
+#### Twist
+mu = 0 |mu = 0.1
+-------|--------
+<img width="400" src="showcases/twist-0-0.gif"> | <img width="400" src="showcases/twist-0-1.gif">
+
+mu = 0.3 | mu = 0.6
+---------|---------
+<img width="400" src="showcases/twist-0-3.gif"> | <img width="400" src="showcases/twist-0-6.gif">
