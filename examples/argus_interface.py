@@ -3,7 +3,7 @@ import argparse
 
 _example = argus.EXAMPLE_BELT_HIGH_TENSION
 _cmd = 0
-_display = False
+_display = True
 _save = True
 _performancefile = ''
 _outputpath = ''
