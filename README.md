@@ -73,7 +73,12 @@ Once you've downloaded the archive `argus_data_private_license.tar.gz`, please p
 
 ```bash
 tar xfz argus_data_private_license.tgz
-pushd data_private_license/meshes/character/ && for name in *.tgz; do echo "Extracting $name..."; tar xfz $name; done && popd
+pushd data_private_license/meshes/character/
+for name in *.tgz; do
+echo "Extracting $name..."
+tar xfz $name
+done
+popd
 ```
 
 Then you'll be able to run the character examples. For instance, using the command line below will run the Arabesque example with friction coefficient = 0.3:

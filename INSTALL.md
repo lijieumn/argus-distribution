@@ -1,41 +1,39 @@
-# Installation Instructions
+# Compilation Instructions
 
-## Obtain the project
+For Ubuntu 18.04, we have provided the script `install.sh` which installs all the dependencies and compiles the project. If compilation was successful, the executable `argus-cloth` will be placed in `build/apps`.
 
-1. Clone project` Argus-distribution`.
+For other platforms, detailed instructions follow.
 
-```bash
-git clone git@github.com:lijieumn/argus-distribution.git
-cd Argus-distribution
-```
+## Obtain the dependencies
 
-2. Update the submodules.
+We assume that you have already cloned the `argus-distribution` project and are in the project root directory.
 
-```bash
-git submodule update --init --recursive
-```
+1. Ensure that the following libraries are installed:
 
-> The two libraries  (`bogus-interface` and `libarcsim`) are put as submodules of this project `Argus-distribution`. The submodule `bogus-interface` serves as an API project, which exposures interfaces for the `so-bogus` library to the users. The `so-bogus` is the actual frictional contact solver and is organized as a submodule of `bogus-interface`.
+	* BLAS
+	* Boost
+	* gfortran
+	* LAPACK
+	* libpng
+	* libxmu
+	* libxi
+	* Eigen3
+	* glfw3
+	* glew
+
+2. Update the submodules:
+
+	```bash
+	git submodule update --init --recursive
+	```
+
+	> Note: The two libraries  (`bogus-interface` and `libarcsim`) are put as submodules of this project `Argus-distribution`. The submodule `bogus-interface` serves as an API project, which exposures interfaces for the `so-bogus` library to the users. The `so-bogus` is the actual frictional contact solver and is organized as a submodule of `bogus-interface`.
 
 Now you've downloaded all the source code needed for the cloth simulator.
 
 ## Compile
 
-1. Dependencies.
-You will need the following libraries installed to be able to compile and run ARGUS:
-
-* BLAS
-* Boost
-* gfortran
-* LAPACK
-* libpng
-* libxmu
-* libxi
-* Eigen3
-* glfw3
-* glew
-
-2. Go the the root path of the `Argus-distribution` and go through the standard `cmake` process.
+Go through the standard `cmake` process:
 
 ```
 mkdir build
@@ -44,6 +42,4 @@ cmake ../
 make -j
 ```
 
-If you do everything correctly, you should be able to complete the compiling successfully. Now the executable file `argus-cloth` is put in `build/apps/`.
-
-
+If the compilation completes successfully, the executable file `argus-cloth` will be put in `build/apps/`.
