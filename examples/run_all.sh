@@ -7,10 +7,6 @@ python examples/cards_low_friction.py -s 1 -d 0 -p performance.txt
 python examples/drag_cloth.py -s 1 -d 0 -p performance.txt
 
 # Following are character examples
-tar xfz argus_data_private_license.tgz
-pushd data_private_license/meshes/character/
-tar xfz *.tgz
-popd
 python examples/character/Arabesque-0-0.py -s 1 -d 0 -p performance.txt
 python examples/character/Arabesque-0-3.py -s 1 -d 0 -p performance.txt
 python examples/character/Clubbing-0-0.py -s 1 -d 0 -p performance.txt

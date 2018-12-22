@@ -69,16 +69,10 @@ Each repository contains between 2 and 4 files corresponding to variations of fr
 * For ACM replicability stamp reviewers: a private link has been provided to the reviewer(s) to download these files. These files should only be used for reviewing purposes.
 * For regular users: please contact [laurence.boissieux@inria.fr](mailto:laurence.boissieux@inria.fr) and [florence.descoubes@inria.fr](mailto:florence.descoubes@inria.fr) to obtain a license.
 
-Once you've downloaded the archive `argus_data_private_license.tar.gz`, please place it in the Argus root directory and follow these commands:
+Once you've downloaded the archive `argus_data_private_license.tar.gz`, please place it in the Argus root directory and follow these commands (under the Argus root directory as well):
 
 ```bash
-tar xfz argus_data_private_license.tgz
-pushd data_private_license/meshes/character/
-for name in *.tgz; do
-echo "Extracting $name..."
-tar xfz $name
-done
-popd
+bash extract_character_files.sh
 ```
 
 Then you'll be able to run the character examples. For instance, using the command line below will run the Arabesque example with friction coefficient = 0.3:
