@@ -1,8 +1,8 @@
 // Flag blowing in the wind
 // Narain et al. 2012, Figure 8
 {
-    "frame_time": 0.002,
-    "frame_steps": 1,
+    "frame_time": 0.032,
+    "frame_steps": 16,
     "end_time": 4,
     "cloths": [{
         "mesh": "meshes/square.obj",
