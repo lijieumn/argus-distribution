@@ -1,0 +1,36 @@
+\documentclass[tikz]{standalone}
+
+\usepackage{libertine}
+\usepackage{pgfplots}
+\usepgfplotslibrary{statistics}
+
+
+\begin{document}
+
+% \begin{tabular}{cc}
+  \begin{tikzpicture}[scale=.5]
+  \begin{axis}[
+    xlabel = {\large time},
+    ylabel = {\large Magnitude of velocity},
+  ]
+  \addplot[color=blue] table [x=t, y=v] {output/figures/fig_5/mass_center_analytical.txt};
+  \addlegendentry{\large analytical}
+  \addplot[color=red] table [x=t, y=v] {output/figures/fig_5/mass_center_simulated.txt};
+  \addlegendentry{\large simulated}
+  \end{axis}
+  \end{tikzpicture}
+  % &
+  \begin{tikzpicture}[scale=.5]
+  \begin{axis}[
+    xlabel = {\large time},
+    ylabel = {\large Relative height},
+  ]
+  \addplot[color=blue] table [x=t, y=h] {output/figures/fig_5/mass_center_analytical.txt};
+  \addlegendentry{\large analytical}
+  \addplot[color=red] table [x=t, y=h] {output/figures/fig_5/mass_center_simulated.txt};
+  \addlegendentry{\large simulated}
+  \end{axis}
+  \end{tikzpicture}
+  % \end{tabular}
+
+\end{document}

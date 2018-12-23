@@ -753,6 +753,23 @@ namespace simulators {
         // Post-coarsened mesh buffer
         tPhysics = mSim.timers[arcsim::Simulation::Physics].last;
 
+        if (arcsim::magic.save_mass_center_data) {
+            double mass_center_height = 0;
+            arcsim::Vec3 mass_center_velocity(0, 0, 0);
+            int num = 0;
+            for (int c = 0; c < mSim.cloths.size(); c++) {
+                for (int n = 0; n < mSim.cloths[c].mesh.nodes.size(); n++) {
+                    arcsim::Node* node = mSim.cloths[c].mesh.nodes[n];
+                    mass_center_height += node->x[2];
+                    mass_center_velocity += node->v;
+                    num++;
+                }
+            }
+            mass_center_height /= num;
+            double vel_magnitude = arcsim::norm(mass_center_velocity)/num;
+            ofstream out("output/figures/fig_5/mass_center_simulated.txt", ios::app);
+            out << mSim.step_time*mSim.step << '\t' << vel_magnitude << '\t' << mass_center_height << std::endl;
+        }
 
         log->setNodeNumber(mSim.cloths[0].mesh.nodes.size());
         if (arcsim::magic.face_edge_constraints) {

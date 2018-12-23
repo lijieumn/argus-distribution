@@ -1,0 +1,59 @@
+// Flag blowing in the wind
+// Narain et al. 2012, Figure 8
+{
+    "frame_time": 0.001,
+    "frame_steps": 1,
+    "duration": 20,
+    "end_time":1,
+    "cloths": [{
+        //"mesh": "meshes/square2.obj",
+        "mesh": "meshes/square2.obj",
+        "transform": {"translate": [-1.3, -1.5, 0], "rotate": [25,0,90,1]},
+        "velocity": {"linear": [0,0,-0.2]},
+        "materials": [{
+        "data": "materials/gray-interlock.json",
+        // "data": "materials/paper.json",
+            "thicken": 1
+    }],
+        "remeshing": {
+            "refine_angle": 0.3,
+            "refine_compression": 0.01,
+            "refine_velocity": 1,
+            "size": [50e-3, 400e-3],
+            "aspect_min": 0.2
+        }
+    }],
+    // "handles": [{"nodes": [0,3]}],
+    "obstacles": [
+    {
+        "mesh": "meshes/squarerefined.obj",
+        "proxy": "floor",
+        "transform": {"translate": [-1,-1,0], "rotate": [25,0,90,1], "scale":3}
+        }],
+    "motions": [
+        [{"time": 0, "transform": {"rotate": [0, 0,0,1]}},
+        {"time": 0.2, "transform": {"rotate": [60, 0,0,1]}},
+        {"time": 0.4, "transform": {"rotate": [120, 0,0,1]}},
+        {"time": 0.6, "transform": {"rotate": [180, 0,0,1]}},
+        {"time": 0.8, "transform": {"rotate": [240, 0,0,1]}},
+        {"time": 1.0, "transform": {"rotate": [300, 0,0,1]}},
+        {"time": 1.2, "transform": {"rotate": [360, 0,0,1]}},
+        {"time": 1.4, "transform": {"rotate": [420, 0,0,1]}},
+        {"time": 1.6, "transform": {"rotate": [480, 0,0,1]}},
+        {"time": 1.8, "transform": {"rotate": [540, 0,0,1]}},
+        {"time": 2.0, "transform": {"rotate": [600, 0,0,1]}},
+        {"time": 2.2, "transform": {"rotate": [660, 0,0,1]}},
+        {"time": 2.4, "transform": {"rotate": [720, 0,0,1]}}]
+    ],
+    // "wind": {"velocity": [10, 0, 0]},
+    "obs_friction": 0.6,
+    "gravity": [0, 0, -9.8],
+    "disable": ["proximity"],
+    "magic": {"projection_thickness": 2e-3, "friction_coeff": 0.2, "repulsion_thickness": 1e-3, "collision_stiffness": 1e6, "fixed_high_res_mesh": false,
+		       "edge_flip_threshold": 0, "proximity_collisions": true, "conserve_momentum": false, "node_lifetime": 5, "relax_initial_state": true, "face_edge_constraints": false,
+               "consider_contact_force": false, "save_mass_center_data":true}
+/* this was bridsonharmon */
+//    "magic": {"projection_thickness": 1e-1, "friction_coeff": 0.15, "repulsion_thickness": 1e-1, "collision_stiffness": 5e3, "fixed_high_res_mesh": true,
+//		      "proximity_collisions": true, "conserve_momentum": false, "sim_type": "bridsonharmon" }
+//>>>>>>> bridsonharmon */
+}
