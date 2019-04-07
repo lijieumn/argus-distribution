@@ -39,7 +39,7 @@ Interface::Interface(std::shared_ptr<Timestep> timestep, int w, int h) {
     glfwSetCursorPosCallback(window, Interface::cursorPositionCallback);
     glfwSetScrollCallback(window, Interface::scrollCallback);
 
-    // glewExperimental = GL_TRUE;
+    glewExperimental = GL_TRUE;
     glewInit();
     std::string shaderPrefix = "./shader/shader.";
     shader.init((shaderPrefix + "vert").c_str(), (shaderPrefix + "frag").c_str());
