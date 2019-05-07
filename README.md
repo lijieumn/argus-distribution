@@ -64,10 +64,7 @@ Note that the generated sequence of OBJ files (or PNG files) contains as many fi
 
 ### Character examples (5 examples in total, under 5 repositories 'Arabesque', 'Clubbing', 'HipHop', 'Shawl', and 'Twist'):
 
-Each repository contains between 2 and 4 files corresponding to variations of friction coefficients. **IMPORTANT:** To run the character examples, you need to have access to the corresponding character meshes (garment mesh + character motion mesh sequence), which are under private Inria license.
-
-* For ACM replicability stamp reviewers: a private link has been provided to the reviewer(s) to download these files. These files should only be used for reviewing purposes.
-* For regular users: please contact [laurence.boissieux@inria.fr](mailto:laurence.boissieux@inria.fr) and [florence.descoubes@inria.fr](mailto:florence.descoubes@inria.fr) to obtain a license.
+Each repository contains between 2 and 4 files corresponding to variations of friction coefficients. **IMPORTANT:** To run the character examples, you need to have access to the corresponding character meshes (garment mesh + character motion mesh sequence), which are under private Inria license. Please contact [laurence.boissieux@inria.fr](mailto:laurence.boissieux@inria.fr) and [florence.descoubes@inria.fr](mailto:florence.descoubes@inria.fr) to obtain a license.
 
 Once you've downloaded the archive `data_private_license.tar.gz`, please place it in the Argus root directory and follow these commands (under the Argus root directory as well):
 
@@ -79,14 +76,6 @@ Then you'll be able to run the character examples. For instance, using the comma
 
 ```bash
 python examples/character/Arabesque-0-3.py
-```
-
-### For ACM replicability stamp reviewers:
-
-There is a script you can use to run all the examples in the paper and provide the performance data as shown in Table 2 in the paper. Run the following command and the performance data will be saved to the file `performance.txt` under the project folder:
-
-```bash
-bash examples/run_all.sh
 ```
 
 ### Others (not in the paper):
