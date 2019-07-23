@@ -88,7 +88,7 @@ def simulate(display = True, demo = EXAMPLE_BOX_AND_CONE, save_objects = False, 
 		cmd = COMMAND_SIMULATE_OFFLINE
 	demo_name = examples[demo]
 	config = os.path.join(config_path_prefix, '{}.json'.format(demo_name))
-	print config
+	print(config)
 	if save_objects:
 		time_now = datetime.datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
 		if len(objects_path_given) > 0:
@@ -116,7 +116,7 @@ def get_run_frames(objects_path):
 	return frame
 
 def no_objects_found(demo_name):
-	print 'No saved objects of example {} found'.format(demo_name)
+	print('No saved objects of example {} found'.format(demo_name))
 	exit(-1)
 
 def find_existing_objects_path(demo_name):
