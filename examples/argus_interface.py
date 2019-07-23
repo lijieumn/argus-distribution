@@ -32,4 +32,4 @@ elif cmd == 1:
 elif cmd == 2:
 	argus.replay(demo = example, save_images = save)
 else:
-	print 'Invalid command code {}. Options: 0 (simulate), 1 (resume), 2 (replay)'.format(cmd)
+	print('Invalid command code {}. Options: 0 (simulate), 1 (resume), 2 (replay)'.format(cmd))
