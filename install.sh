@@ -1,3 +1,4 @@
+#! /bin/bash
 # Tested on fresh install of Ubuntu 18.04 LTS
 # If you want parallel compilation, run `MAKEFLAGS="-j$(nproc)" ./install.sh`
 
